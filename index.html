@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#17243d">
+  <meta name="description" content="Missão Respeito: um jogo educativo de combate ao bullying.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="icone-192.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Missão Respeito</title>
+</head>
+<body>
+  <main>
+    <header><h1>🎮 MISSÃO RESPEITO</h1><p>Juntos contra o bullying!</p></header>
+    <section id="menu" class="cartao">
+      <h2>Bem-vindo, herói!</h2>
+      <p>Explore 20 fases e complete 100 missões. Alcance a estrela e escolha atitudes respeitosas.</p>
+      <button id="iniciar">▶ JOGAR</button>
+      <button id="reiniciar" class="secundario">↻ RECOMEÇAR</button>
+      <p class="ajuda">No computador: WASD ou setas. No celular: botões na tela.</p>
+    </section>
+    <section id="jogo" class="cartao escondido">
+      <div class="painel" aria-live="polite">
+        <span id="fase">Fase 1/20</span><span id="missao">Missão 1/5</span>
+        <span id="pontos">⭐ 0</span><span id="vidas">❤️ 3</span>
+      </div>
+      <canvas id="tela" width="640" height="400" aria-label="Cenário do jogo com personagem, obstáculos e estrela"></canvas>
+      <p id="mensagem" aria-live="polite"></p>
+      <section id="pergunta" class="escondido" aria-label="Pergunta educativa">
+        <h2 id="enunciado"></h2>
+        <div id="alternativas"></div>
+        <p id="resultado" aria-live="polite"></p>
+      </section>
+      <div class="controles" aria-label="Controles de movimento">
+        <div><button data-direcao="cima" aria-label="Mover para cima">▲</button></div>
+        <div><button data-direcao="esquerda" aria-label="Mover para esquerda">◀</button><button data-direcao="baixo" aria-label="Mover para baixo">▼</button><button data-direcao="direita" aria-label="Mover para direita">▶</button></div>
+      </div>
+      <button id="voltar" class="secundario">MENU</button>
+    </section>
+    <footer>Respeitar é uma missão de todos! 💛</footer>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>
